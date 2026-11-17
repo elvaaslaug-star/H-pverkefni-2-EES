@@ -3,6 +3,7 @@ síðurnar*/
 
 <!doctype html>
 <html lang="is">
+<script type="module" src="./main.js"></script>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,7 +26,7 @@ síðurnar*/
     <main>
       <h2>Velkomin á Umsagnar vefinn!</h2>
       <p>Hér getur þú skoðað og bætt við umsögnum um ýmislegt.</p>
-      <div>
+      <div id="book-container">
         <label for="sort">Raða eftir:</label>
         <select id="sort">
           <option value="title-asc">Titill (A-Ö)</option>
@@ -35,6 +36,7 @@ síðurnar*/
           <option value="rating-asc">Einkunn (Lægsta fyrst)</option>
         </select>
       </div>
+      <div id="books-container"></div>
     </main>
 
     <footer>
