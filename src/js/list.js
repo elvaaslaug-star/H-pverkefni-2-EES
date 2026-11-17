@@ -1,4 +1,4 @@
-/* býr til listann*/
+// býr til listann
 
 export function buaTilSpjald(stak){
     const spjald = document.createElement('article');
@@ -14,6 +14,25 @@ export function buaTilSpjald(stak){
     einkunn.textContent = `Einkunn: ${stak.einkunn} / 10`;
 
     spjald.append(titill, hofundur, einkunn);
+    
+     if (stak.byrjad) {
+        const byrjad = document.createElement('p');
+        byrjad.textContent = `Byrjað: ${stak.byrjad}`;
+        spjald.appendChild(byrjad);
+    }
+
+    if (stak.lokid) {
+        const lokid = document.createElement('p');
+        lokid.textContent = `Lokið: ${stak.lokid}`;
+        spjald.appendChild(lokid);
+    }
+
+    if (stak.umsogn) {
+        const umsogn = document.createElement('p');
+        umsogn.textContent = `Umsögn: ${stak.umsogn}`;
+        spjald.appendChild(umsogn);
+    }
+
     return spjald;
 }
 
