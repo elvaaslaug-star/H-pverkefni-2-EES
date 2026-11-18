@@ -1,5 +1,5 @@
 :root {
-  --sage-hint: #dce6d9;
+  --sage-light: #dce6d9;
   --mint: #bfcfbb;
   --sage: #8ea58c;
   --moss: #738a6e;
@@ -15,8 +15,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: inter, sans-serif;
-  background-color: var(--sage-hint);
+  font-family: sans-serif;
+  background-color: var(--sage-light);
   color: var(--evergreen);
 }
 
