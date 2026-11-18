@@ -30,15 +30,28 @@ nav a {
   text-decoration: none;
 }
 
-nav a:hover,
-nav a:focus-visible {
-  background-color: var(--moss);
-  color: white;
-}
-
 nav a:focus-visible {
   outline: 2px solid var(--mint);
   outline-offset: 2px;
+}
+
+/* Útlit á umsögnum */
+
+.umsagnir-listi {
+  display: grid;
+  gap: 1rem;
+}
+
+.efni-spjald {
+  padding: 1rem 1.25rem;
+  background-color: white;
+  border-left: 6px solid var(--moss);
+  border-radius: 0.5rem;
+}
+
+.efni-spjald h2,
+.efni-spjald p {
+  margin: 0.25rem 0;
 }
 
 /* Fótur */
@@ -50,10 +63,6 @@ footer {
   padding: 1rem;
   background-color: var(--evergreen);
   color: var(--sage-light);
-}
-
-footer p {
-  margin: 0;
 }
 
 footer p:first-child {

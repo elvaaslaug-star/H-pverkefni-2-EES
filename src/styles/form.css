@@ -1,0 +1,70 @@
+/* Stílar fyrir formin í ny-umsokn.html og síunn í umsagnir.html */
+.stjorna-umsognum select,
+.skraning-form select,
+.skraning-form input {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  color: var(--evergreen);
+  background-color: white;
+  border: 2px solid var(--evergreen);
+  border-radius: 0.5rem;
+}
+
+.stjorna-umsognum select,
+.skraning-form select {
+  cursor: pointer;
+}
+
+.stjorna-umsognum select:hover,
+.skraning-form select:hover {
+  background-color: var(--mint);
+}
+
+.stjorna-umsognum select:focus-visible,
+.skraning-form select:focus-visible,
+.skraning-form input:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 2px;
+}
+
+/* Síun á umsagnasíðu */
+.stjorna-umsognum {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Skráningarform */
+.skraning-form {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 32rem;
+}
+
+.skraning-form label {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.skraning-form button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--sage-light);
+  background-color: var(--evergreen);
+  border: 2px solid var(--evergreen);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.skraning-form button:hover {
+  background-color: var(--moss);
+  border-color: var(--moss);
+}
+
+.skraning-form button:focus-visible {
+  outline: 2px solid var(--moss);
+  outline-offset: 2px;
+}
