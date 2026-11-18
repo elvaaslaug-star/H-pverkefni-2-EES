@@ -51,8 +51,6 @@ function buaTilForm() {
   takki.textContent = "Skrá umsögn";
 
   form.append(
-    typeLabel,
-    typeSelect,
     titillLabel,
     titillInput,
     hofundurLabel,
