@@ -1,0 +1,85 @@
+/* Haus */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding-top: 0.5rem;
+  background-color: var(--evergreen);
+  color: var(--sage-hint);
+}
+
+header h1 {
+  margin: 0;
+  padding: 0.5rem 1rem;
+}
+
+nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--sage-hint);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: var(--moss);
+  color: white;
+}
+
+nav a:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 2px;
+}
+
+/* Fótur */
+footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.25rem 1rem;
+  padding: 1rem;
+  background-color: var(--evergreen);
+  color: var(--sage-hint);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p:first-child {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+footer p:last-child {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Fyrir skalanleika */
+@media (width <= 600px) {
+  header,
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    grid-auto-flow: row;
+  }
+
+  footer p:first-child,
+  footer p:last-child {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}

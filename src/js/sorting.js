@@ -1,29 +1,30 @@
 /* raðar eftir einkunn*/
-export function sortBooks(books, sortType) {
-    const sortedBooks = [...books];
-    switch (sortType) {
-        case 'title-asc':
-            return sortedBooks.sort((a, b) => a.title.localeCompare(b.title));
-        case 'title-desc':
-            return sortedBooks.sort((a, b) => b.title.localeCompare(a.title));  
-        case 'author-asc':
-            return sortedBooks.sort((a, b) => a.author.localeCompare(b.author));
-        case 'rating-desc':
-            return sortedBooks.sort((a, b) => b.rating - a.rating);
-        case 'rating-asc':
-            return sortedBooks.sort((a, b) => a.rating - b.rating); 
-        default:
-            return sortedBooks;
-    }
+export function sortBooks(umsagnir, sortType) {
+  const sortedUmsagnir = [...umsagnir];
+  switch (sortType) {
+    case "title-asc":
+      return sortedUmsagnir.sort((a, b) => a.titill.localeCompare(b.titill));
+    case "title-desc":
+      return sortedUmsagnir.sort((a, b) => b.titill.localeCompare(a.titill));
+    case "author-asc":
+      return sortedUmsagnir.sort((a, b) =>
+        a.hofundur.localeCompare(b.hofundur),
+      );
+    case "rating-desc":
+      return sortedUmsagnir.sort((a, b) => b.einkunn - a.einkunn);
+    case "rating-asc":
+      return sortedUmsagnir.sort((a, b) => a.einkunn - b.einkunn);
+    default:
+      return sortedUmsagnir;
+  }
 }
-export function setupSorting(books, renderBooks) {
-    const sortSelect = document.getElementById('sort');
-    if(!sortSelect) {
-        return;
-    }
-    sortSelect.addEventListener('change', () => {
-        const sortType = sortSelect.value;
-        const sortedBooks = sortBooks(books, sortType);
-        renderBooks(sortedBooks);
-    });
+export function setupSorting(umsagnir, renderUmsagnir) {
+  const sortSelect = document.getElementById("sort");
+  if (!sortSelect) return;
+
+  sortSelect.addEventListener("change", () => {
+    const sortType = sortSelect.value;
+    const sortedUmsagnir = sortBooks(umsagnir, sortType);
+    renderUmsagnir(sortedUmsagnir);
+  });
 }

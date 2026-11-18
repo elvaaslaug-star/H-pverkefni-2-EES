@@ -1,25 +1,33 @@
-import{ setupSorting } from './src/js/sorting.js';
+import { renderLayout } from "./src/js/layout.js";
+import { setupSorting } from "./src/js/sorting.js";
+import { saekjaGogn } from "./src/js/storage.js";
 
-function renderReviews(reviews) {
-    const container = document.getElementById('reviews-container');
+/* Bæta við haus og fót */
+renderLayout();
 
-    container.innerHTML = '';
+const umsagnir = saekjaGogn([]);
 
-    reviews.forEach(review => {
-        const reviewElement = document.createElement('div');
+function renderReviews(umsagnir) {
+  const container = document.getElementById("reviews-container");
 
-        reviewElement.innerHTML = `
-            <h3>${review.title}</h3>
-            <p>Tegund: ${review.type}</p>
-            <p>Höfundur: ${review.author}</p>
-            <p>Einkunn: ${review.rating}</p>
+  if (!container) return;
+
+  container.innerHTML = "";
+
+  umsagnir.forEach((umsogn) => {
+    const reviewElement = document.createElement("div");
+
+    reviewElement.innerHTML = `
+            <h3>${umsogn.titill}</h3>
+            <p>Tegund: ${umsogn.tegund}</p>
+            <p>Höfundur: ${umsogn.hofundur}</p>
+            <p>Einkunn: ${umsogn.einkunn}</p>
         `;
 
-        container.appendChild(reviewElement);
-    });
+    container.appendChild(reviewElement);
+  });
 }
 //listi yfir bækur
 //renderbooks til að birta bækurnar
-renderReviews(reviews);
-setupSorting(reviews, renderReviews);
-
+renderReviews(umsagnir);
+setupSorting(umsagnir, renderReviews);
