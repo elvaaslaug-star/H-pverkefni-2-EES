@@ -1,24 +1,26 @@
 import{ setupSorting } from './src/js/sorting.js';
 
 
-function renderBooks(books) {
-    const container = document.getElementById('books-container');
+function renderReviews(reviews) {
+    const container = document.getElementById('reviews-container');
 
     container.innerHTML = '';
 
-    books.forEach(book => {
-        const bookElement = document.createElement('div');
+    reviews.forEach(review => {
+        const reviewElement = document.createElement('div');
 
-        bookElement.innerHTML = `
-            <h3>${book.title}</h3>
-            <p>Höfundur: ${book.author}</p>
-            <p>Einkunn: ${book.rating}</p>
+        reviewElement.innerHTML = `
+            <h3>${review.title}</h3>
+            <p>Tegund: ${review.type}</p>
+            <p>Höfundur: ${review.author}</p>
+            <p>Einkunn: ${review.rating}</p>
         `;
 
-        container.appendChild(bookElement);
+        container.appendChild(reviewElement);
     });
 }
 //listi yfir bækur
 //renderbooks til að birta bækurnar
-renderBooks(books);
-setupSorting(books, renderBooks);
+renderReviews(reviews);
+setupSorting(reviews, renderReviews);
+
