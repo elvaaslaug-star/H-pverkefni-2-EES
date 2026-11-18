@@ -16,7 +16,7 @@ export function sortBooks(books, sortType) {
             return sortedBooks;
     }
 }
-export function setupSorting(books) {
+export function setupSorting(books, renderBooks) {
     const sortSelect = document.getElementById('sort');
     if(!sortSelect) {
         return;

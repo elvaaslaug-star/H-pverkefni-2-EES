@@ -1,5 +1,4 @@
-/*flytur inn allt javascript í minni skránum */
-import{ setupSorting } from './sorting.js';
+import{ setupSorting } from './src/js/sorting.js';
 
 function renderReviews(reviews) {
     const container = document.getElementById('reviews-container');
@@ -19,5 +18,8 @@ function renderReviews(reviews) {
         container.appendChild(reviewElement);
     });
 }
+//listi yfir bækur
+//renderbooks til að birta bækurnar
 renderReviews(reviews);
 setupSorting(reviews, renderReviews);
+
