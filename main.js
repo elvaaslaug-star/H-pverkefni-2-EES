@@ -1,6 +1,5 @@
 import{ setupSorting } from './src/js/sorting.js';
 
-
 function renderReviews(reviews) {
     const container = document.getElementById('reviews-container');
 
