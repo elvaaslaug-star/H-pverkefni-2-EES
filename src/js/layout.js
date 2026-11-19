@@ -78,7 +78,7 @@ export function renderReviews() {
 
   const paragraph = document.createElement("p");
   paragraph.textContent =
-    "Hér getur þú skoðað nokkrar af þínum glæsilegu umsögnum!";
+    "Hér að neðan er smá yfirlit yfir umsagnirnar þínar :)";
 
   const reviewsContainer = document.createElement("div");
   reviewsContainer.id = "reviews-container";
