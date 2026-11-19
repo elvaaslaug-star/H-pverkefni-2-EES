@@ -2,7 +2,7 @@
   "name": "q",
   "version": "1.0.0",
   "private": true,
-  "description": "Verkefnið felst í því að útbúa vef sem leyfir einum notanda að skrá bækur sem viðkomandi hefur lesið, gefa þeim einkunnir, raða og sía, vista og skoða yfirlit.",
+  "description": "Umsagnarvefur",
   "homepage": "https://github.com/elvaaslaug-star/H-pverkefni-2-EES#readme",
   "bugs": {
     "url": "https://github.com/elvaaslaug-star/H-pverkefni-2-EES/issues"
