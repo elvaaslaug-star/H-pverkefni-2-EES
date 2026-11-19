@@ -2,7 +2,6 @@ import { renderLayout, renderReviews } from "./src/js/layout.js";
 import { setupSorting } from "./src/js/sorting.js";
 import { saekjaGogn } from "./src/js/storage.js";
 
-/* Bæta við haus og fót */
 renderLayout();
 renderReviews();
 
@@ -31,3 +30,12 @@ function renderReviewsList(umsagnir) {
 
 renderReviewsList(umsagnir);
 setupSorting(umsagnir, renderReviewsList);
+
+const reviewsContainer = document.getElementById("reviews-container");
+if (reviewsContainer) {
+  const nyUmsognTakki = document.createElement("a");
+  nyUmsognTakki.href = "/src/sidur/ny-umsogn.html";
+  nyUmsognTakki.textContent = "Búa til nýja umsögn?";
+  nyUmsognTakki.classList.add("takki-hlekkur");
+  reviewsContainer.after(nyUmsognTakki);
+}

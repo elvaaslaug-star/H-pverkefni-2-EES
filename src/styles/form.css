@@ -15,11 +15,6 @@
   cursor: pointer;
 }
 
-.stjorna-umsognum select:hover,
-.skraning-form select:hover {
-  background-color: var(--mint);
-}
-
 .stjorna-umsognum select:focus-visible,
 .skraning-form select:focus-visible,
 .skraning-form input:focus-visible {
@@ -47,7 +42,8 @@
   font-weight: bold;
 }
 
-.skraning-form button {
+.skraning-form button,
+.takki-hlekkur {
   margin-top: 1rem;
   padding: 0.6rem 1rem;
   font-size: 1rem;
@@ -59,12 +55,20 @@
   cursor: pointer;
 }
 
-.skraning-form button:hover {
+.takki-hlekkur {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+}
+
+.skraning-form button:hover,
+.takki-hlekkur:hover {
   background-color: var(--moss);
   border-color: var(--moss);
 }
 
-.skraning-form button:focus-visible {
-  outline: 2px solid var(--moss);
+.skraning-form button:focus-visible,
+.takki-hlekkur:focus-visible {
+  outline: 2px solid var(--sage-light);
   outline-offset: 2px;
 }

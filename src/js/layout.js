@@ -63,23 +63,23 @@ export function renderLayout() {
 
   document.body.prepend(createHeader());
   document.body.append(main);
-  //document.body.append(createFooter());
+  document.body.append(createFooter());
 
   return main;
 }
 
 export function renderReviews() {
-  const main = document.createElement("main");
+  const main = document.querySelector("main");
 
   if (!main) return;
-    
+
   const header = document.createElement("h2");
-  header.textContent = "Umsagnir";
+  header.textContent = "Velkominn á umsagnavefinn!";
 
   const paragraph = document.createElement("p");
   paragraph.textContent =
-    "Hér að neðan má sjá allar umsagnir sem hafa verið skráðar á síðuna.";
-  
+    "Hér getur þú skoðað nokkrar af þínum glæsilegu umsögnum!";
+
   const reviewsContainer = document.createElement("div");
   reviewsContainer.id = "reviews-container";
 
@@ -95,7 +95,7 @@ export function renderReviews() {
     { value: "title-desc", text: "Titill (Z-A)" },
     { value: "author-asc", text: "Höfundur (A-Z)" },
     { value: "rating-desc", text: "Einkunn (Hæsta fyrst)" },
-    { value: "rating-asc", text: "Einkunn (Lægsta fyrst)" }
+    { value: "rating-asc", text: "Einkunn (Lægsta fyrst)" },
   ];
 
   options.forEach((optionData) => {
@@ -110,6 +110,4 @@ export function renderReviews() {
 
   reviewsContainerWrapper.append(sortLabel, select, reviewsContainer);
   main.append(header, paragraph, reviewsContainerWrapper);
-  document.body.appendChild(main);
-  document.body.append(createFooter());
 }
