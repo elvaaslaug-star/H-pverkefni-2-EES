@@ -6,8 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(import.meta.dirname, "index.html"),
-        umsagnir: resolve(import.meta.dirname, "sidur/umsagnir.html"),
-        nyUmsogn: resolve(import.meta.dirname, "sidur/ny-umsogn.html"),
+        umsagnir: resolve(import.meta.dirname, "/src/sidur/umsagnir.html"),
+        nyUmsogn: resolve(import.meta.dirname, "/src/sidur/ny-umsogn.html"),
       },
     },
   },
